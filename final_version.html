@@ -4,86 +4,76 @@
 <head>
   <title>Daniel's Landing Page</title>
   <style>
+    body {
+      text-align: center;
+      background: url("imgs/dallas_skyline.png");
+      background-size: cover;
+      background-position: center;
+      color: red;
+      font-size: 20px;
+      text-shadow: 2px 2px 4px black;
+      font-family: Helvetica;
+    }
 
-  body {
-    text-align: center;
-    background: url("imgs/dallas_skyline.png");
-    background-size: cover;
-    background-position: center;
-    color: red;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px black;
-    font-family: Helvetica;
-  }
+    img {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 3px solid red;
+    }
 
-  img {
-    width: 240px;
-    height: 240px;
-    border-radius: 50%;
-    border: 3px solid red;
-  }
+    main {
+      margin: 75px auto auto auto;
+      width: 700px;
+      height: 500px;
+      background-color: gray;
+      border-radius: 5%;
+      border: 3px solid red;
+      padding-top: 75px;
+      opacity: .9;
+    }
 
-  #content {
-    margin: 75px auto auto auto;
-    width: 800px;
-    height: 600px;
-    background-color: gray;
-    border-radius: 5%;
-    border: 3px solid red;
-    padding-top: 75px;
-    opacity: .9;
-  }
+    #main-title {
+      font-size: 25px;
+    }
 
-  #facts {
-    width: 250px;
-    margin: 0 auto;
-  }
+    section {
+      width: 250px;
+      margin: 0 auto;
+    }
 
-  #facts ol {
-    text-align: left;
-  }
+    section ol {
+      text-align: left;
+    }
 
-  #facts p {
-    font-size: 15px;
-  }
+    main p {
+      font-size: 15px;
+    }
 
-  button {
-    color: white;
-    font-size: .7em;
-    background-color: red;
-    width: 10em;
-    padding: 1em;
-    border-radius: 5px;
-  }
-</style>
+    button {
+      color: white;
+      font-size: .7em;
+      background-color: red;
+      width: 10em;
+      padding: 1em;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
-  <div id="content">
+  <main>
     <img src="./imgs/profile.jpg" alt="Daniel's Profile Picture">
-    <h3>Hello, I'm Daniel, a Dallas Based Software Engineer</h3>
+    <h1 id="main-title">Hello, I'm Daniel, a Dallas Based Software Engineer</h1>
     <p>Here's some fun facts about me</p>
-    <div id="facts">
+    <section>
       <ol>
         <li>I Love to Teach</li>
         <li>I Love Coffee</li>
         <li>I Love to Code</li>
       </ol>
-      <p>The current date is</p>
-      <p id="date"></p>
-      <button onclick="sayHello()">Say Hello</button>
-    </div>
-  </div>
-  <script>
-    document.querySelector('#date').textContent = new Date().toDateString()
-    function sayHello() {
-      var name = prompt("Hello, my name is Daniel, what's your name?");
-      if(name) {
-        alert("Hello " + name + ", nice to meet you!");
-      } else {
-        alert("Please enter your name");
-        sayHello();
-      }
-    }
-  </script>
+    </section>
+  </main>
 </body>
+
 </html>
